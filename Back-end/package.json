@@ -1,0 +1,26 @@
+{
+  "name": "autenticaciondeuser",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "Back-end",
+    "Front-end"
+  ],
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env  NODE_ENV=prod node --watch ./index.js",
+    "test": "cross-env  NODE_ENV=test node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "dotenv": "^16.4.5"
+  }
+}

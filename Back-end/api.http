@@ -1,0 +1,49 @@
+
+GET  http://localhost:3000/stats/:7523dd41-569d-11ef-8a6c-f02f7419c6b0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1MjNkZDQxLTU2OWQtMTFlZi04YTZjLWYwMmY3NDE5YzZiMCIsInVzZXJuYW1lIjoibWFyY2VsbzEyMzQiLCJpYXQiOjE3MjM1Nzk5ODQsImV4cCI6MTcyMzU4MzU4NH0.8dXIRen3tEYHbHokbPv9n__LX3N1DTs9oXt4wG8h3LY
+
+###
+
+POST http://localhost:3000/stats/:Scleyt
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZEhleCI6IjRCQjc3NzQxNUZCRDExRUY4Qjk2RjAyRjc0MTlDNkIwIiwidXNlcm5hbWUiOiJTY2xleXQiLCJpYXQiOjE3MjQyNTE4NTQsImV4cCI6MTcyNDI1NTQ1NH0.3DzgB-QfWtRFBf5Tgs9lm-2pZqCR4Y3UlQdYrPTtc7U
+
+{
+   "porcentaje2Puntos" : "2",
+   "porcentaje3Puntos" : "2"
+}
+
+###
+
+PATCH  http://localhost:3000/stats/e0201a72-0d9f-4b1c-89e3-ca75c95ba8f3
+Content-Type: application/json
+
+{
+   "tiro 3 punto": "8/10",
+   "tiro 2 puntos": "6/10"
+}
+###
+
+DELETE  http://localhost:3000/stats/e0201a72-0d9f-4b1c-89e3-ca75c95ba8f3
+
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "Scleyt",
+    "password": "123456789"
+}
+###
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "nombre": "Marcelo",
+    "apellido": "Sanchez",
+    "username": "Scleyt",
+    "password": "123456789"
+}

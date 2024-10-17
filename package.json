@@ -1,0 +1,29 @@
+{
+  "name": "appstatistics",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "workspaces":["Back-end", "Front-end"],
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd ./Front-end && npm run build && rm -rf ../Back-end/dist && cp -r ./dist ../Back-end/dist && cd ../Back-end && npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "standard"
+  },
+  "devDependencies": {
+    "bcrypt": "5.1.1",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "express": "4.19.2",
+    "jsonwebtoken": "9.0.2",
+    "mysql2": "^3.11.0",
+    "standard": "17.1.0",
+    "supertest": "^7.0.0",
+    "zod": "3.23.8"
+  }
+}
