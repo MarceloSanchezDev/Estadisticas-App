@@ -6,7 +6,6 @@ export const setToken = newToken => {
 
 export async function allStatistics(url) {
     if (!url) {
-      console.log("URL no proporcionada");
       return null;
     }
   
@@ -15,19 +14,16 @@ export async function allStatistics(url) {
         'Authorization' : token
     }});
       if (!response.ok) {
-        console.error("Error en la respuesta del servidor:", response.statusText);
         return null;
       }
       const result = await response.json();
       return result;
     } catch (error) {
-      console.error("Error al obtener las estadísticas:", error);
       return null;
     }
   }
 export async function newStatistics(url,{input}) {
   if (!url) {
-    console.log("URL no proporcionada");
     return null;
   }
 
@@ -40,21 +36,17 @@ export async function newStatistics(url,{input}) {
       },
       body: JSON.stringify({ input })})
     if (!response.ok) {
-      console.error("Error en la respuesta del servidor:", response.statusText);
       return null;
     }
     const result = await response.json();
-    console.log(result);
     return result;
   } catch (error) {
-    console.error("Error al obtener las estadísticas:", error);
     return null;
   }
 }
 
 export async function deleteStatistics(url,id){
     if (!url) {
-      console.log("URL no proporcionada");
       return null;
     }
   
@@ -63,21 +55,17 @@ export async function deleteStatistics(url,id){
         'Authorization' : token}
     })
       if (!response.ok) {
-        console.error("Error en la respuesta del servidor:", response.statusText);
         return null;
       }
       const result = await response.json();
-      console.log("Elemento eliminado", result);
       return result;
     } catch (error) {
-      console.error("Error al eliminar el elemento:", error);
       return null;
     }
   }
 
 export async function loginUser(url,{username, password}){
   if (!url) {
-    console.log("URL no proporcionada");
     return null;
   }
    const user = await fetch(url, {
@@ -92,7 +80,6 @@ export async function loginUser(url,{username, password}){
 
 export async function registerUser(url, {username, password, nombre, apellido,email}) {
   if (!url) {
-    console.log("URL no proporcionada");
     return null;
   }
     const user = fetch(url,  {method: 'POST',

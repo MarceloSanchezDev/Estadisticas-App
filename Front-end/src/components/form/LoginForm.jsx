@@ -12,9 +12,7 @@ export function LoginForm({info,msgClas, handlerUser, onClick}){
     
     const handlerLogin = async (e) => {
         e.preventDefault()
-        console.log('username:',username,'password:',password)
         const user = await loginUser('/auth/login',{username, password})
-        console.log(user)
         if(!user.error){
           window.localStorage.setItem('dataUser',JSON.stringify(user))
           msgClas('done')
@@ -24,13 +22,10 @@ export function LoginForm({info,msgClas, handlerUser, onClick}){
             setUsername('')
             setPassword('')
           },5000)
-          console.log(user.username)
-          console.log(user.token)
           setToken(user.token)
           handlerUser(user)
           }
           else{
-              console.log(user.error)
               msgClas('error')
               setClassInput('inputFailed')
               info(user.error)

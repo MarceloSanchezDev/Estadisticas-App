@@ -43,7 +43,6 @@ export function InfoStat ({stast}) {
         </div>
         <div className="divObserva">
             <h1>observaciones</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vitae id ratione neque magni ad reiciendis quaerat! Ipsam qui sequi ullam vitae praesentium! Iusto incidunt maiores inventore perspiciatis enim consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minus cum, totam atque corporis rerum aliquid. Optio eius, nemo excepturi consequatur odio, sequi enim blanditiis odit quae rerum quia praesentium.</p>
             <div>
                 <div></div>
                 <div></div>

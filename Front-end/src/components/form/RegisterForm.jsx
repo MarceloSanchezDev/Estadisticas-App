@@ -16,7 +16,6 @@ export function RegisterForm({info,msgClas, handlerUser,onClick}){
     const [classInput, setClassInput] = useState('inputLongin')
     const handlerRegister = async (e) => {
         e.preventDefault()
-        console.log('username:',username,'password:',password,'repeatPassword:',repeatPassword)
         if(password !== repeatPassword){
             setTimeout(() => {
                 setClassInput('inputFailed')
@@ -32,8 +31,6 @@ export function RegisterForm({info,msgClas, handlerUser,onClick}){
             if(!(username === null && password === null)){
                 const user = await registerUser('/auth/register',{username, password, nombre, apellido,email})
                 window.localStorage.setItem('dataUser',JSON.stringify(user))
-                    console.log(user)
-                    console.log(user.token)
                     setNombre('')
                     setApellido('')
                     setUsername('')

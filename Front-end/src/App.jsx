@@ -39,7 +39,6 @@ function App() {
     },2000)
   }
   const handleMss = (clase, mensaje) =>{
-    console.log(clase, mensaje)
     setMessageClass(clase)
     setErrorMessage(mensaje)
   }

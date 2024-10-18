@@ -12,11 +12,9 @@ export default function UserStatistics ({stasts,setStat,show,setShow,img, onClic
             setShow(!show)
             if(img){
                 filter(stasts.id)
-                console.log('img:',img)
             }
             if(!img){
                 setStats() 
-                console.log('img:',img)
             }
         },2000)
 
