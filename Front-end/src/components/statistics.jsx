@@ -59,7 +59,7 @@ export default function Statistics({userController,msg,handdlerSession}) {
     setShowInfo(false)
     setIsLoading(true)
     setTimeout(async()=>{
-      const result = await allStatistics(`http://localhost:3000/stats/${userController.username}`)
+      const result = await allStatistics(`/stats/${userController.username}`)
       const estadisticasOrdenadas = result.sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
       setIsLoading(false)
       setStatistics(estadisticasOrdenadas)
